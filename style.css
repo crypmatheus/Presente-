@@ -163,23 +163,4 @@ body {
 /* animação */
 
 @keyframes pulse {
-
-  0% {
-
-    transform: rotate(-45deg) scale(1);
-
-  }
-
-  50% {
-
-    transform: rotate(-45deg) scale(1.07);
-
-  }
-
-  100% {
-
-    transform: rotate(-45deg) scale(1);
-
-  }
-
-}
+  
