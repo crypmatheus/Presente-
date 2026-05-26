@@ -1,4 +1,5 @@
 body {
+
   margin: 0;
   height: 100vh;
 
@@ -9,22 +10,28 @@ body {
   background: linear-gradient(135deg, #0f0f0f, #3b0a45);
 
   overflow: hidden;
-  font-family: Arial, sans-serif;
+
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .container {
+
   position: relative;
 
   width: 400px;
-  height: 400px;
+  height: 500px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 /* coração */
+
 .heart {
+
   position: absolute;
 
   width: 250px;
@@ -37,10 +44,12 @@ body {
   animation: pulse 1.5s infinite;
 
   box-shadow: 0 0 40px #ff0055;
+
 }
 
 .heart::before,
 .heart::after {
+
   content: "";
 
   position: absolute;
@@ -51,20 +60,27 @@ body {
   background: #ff0055;
 
   border-radius: 50%;
+
 }
 
 .heart::before {
+
   top: -125px;
   left: 0;
+
 }
 
 .heart::after {
+
   left: 125px;
   top: 0;
+
 }
 
 /* cartão */
+
 .card {
+
   position: relative;
 
   width: 240px;
@@ -89,52 +105,81 @@ body {
   box-shadow: 0 0 30px rgba(255,255,255,0.2);
 
   transition: 0.3s;
+
 }
 
 .card:hover {
+
   transform: scale(1.06);
+
 }
 
 .card h1 {
+
   color: white;
+
   font-size: 24px;
+
   text-align: center;
+
   padding: 10px;
+
 }
 
 /* mensagem */
+
 #mensagem {
+
   position: absolute;
 
-  bottom: -70px;
+  bottom: -120px;
 
   color: white;
 
-  font-size: 24px;
+  width: 320px;
+
   text-align: center;
+
+  line-height: 1.6;
 
   opacity: 0;
 
   transition: 1s;
+
+  font-family: 'Great Vibes', cursive;
+
+  font-size: 28px;
+
 }
+
+/* mostrar mensagem */
 
 #mensagem.show {
+
   opacity: 1;
+
 }
 
-/* animação coração */
+/* animação */
+
 @keyframes pulse {
 
   0% {
+
     transform: rotate(-45deg) scale(1);
+
   }
 
   50% {
+
     transform: rotate(-45deg) scale(1.07);
+
   }
 
   100% {
+
     transform: rotate(-45deg) scale(1);
+
   }
 
 }
