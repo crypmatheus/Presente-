@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* coração */
+.heart {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: pulse 1.5s infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -125px;
+  left: 0;
+}
+
+.heart::after {
+  left: 125px;
+  top: 0;
+}
+
+/* cartão */
+.card {
+  position: relative;
+  width: 220px;
+  height: 140px;
+  background: white;
+  border-radius: 20px;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h1 {
+  color: #ff0066;
+  font-size: 24px;
+}
+
+/* mensagem */
+#mensagem {
+  position: absolute;
+  bottom: -60px;
+  color: white;
+  font-size: 22px;
+  opacity: 0;
+  transition: 1s;
+}
+
+#mensagem.show {
+  opacity: 1;
+}
+
+/* animação */
+@keyframes pulse {
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+
+  100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
