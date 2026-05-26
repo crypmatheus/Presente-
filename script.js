@@ -5,5 +5,10 @@ function mostrarMensagem() {
 
   mensagem.classList.add("show");
 
-  musica.play();
+  musica.volume = 0.5;
+
+  musica.play().catch((erro) => {
+    console.log("Erro ao tocar música:", erro);
+  });
+
 }
